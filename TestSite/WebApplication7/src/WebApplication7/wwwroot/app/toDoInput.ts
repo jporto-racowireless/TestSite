@@ -7,19 +7,21 @@ import {ToDoService} from './ToDoService';
 
 })
 export class ToDoInput {
-    onClick(value){
-        //console.log(value);
-        //console.log(this.toDoService);
+    inputList1 = [];
+    inputList2 = [];
+    firstInputModel: string = "intial value";
+    secondInputModel: string;
 
+    firstFormSubmit() {
+
+        this.inputList1.push(this.firstInputModel);
     }
 
-
-    public arr = Array(2999).fill(0).map((x, i) => i);
-    public arr1 = Array(15).fill(0).map((x, i) => i);
-
-    constructor(public toDoService: ToDoService) {
-
-       // this.arr.length = 999;
+    secondFormSubmit() {
+          this.inputList2.push(this.secondInputModel);
+    }
+    
+    constructor(test, [terms], test1) {
 
     }
 

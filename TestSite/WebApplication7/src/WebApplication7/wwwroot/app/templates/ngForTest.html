@@ -1,9 +1,27 @@
 ﻿
 
-<table>
-    <tr *ngFor="#t of arr" >
-        <td *ngFor="#t1 of arr1">
-            {{t}}, {{t1}}
-        </td>
-    </tr>
-</table>
+
+<form (submit)="firstFormSubmit()">
+    <span contenteditable="true">dqwdqwd</span>
+
+
+    <input [(ngModel)]="firstInputModel" />
+    {{firstInputModel}}
+    <ul>
+        <li *ngFor="#inputText of inputList1">
+            {{inputText}}
+        </li>
+    </ul>
+</form>
+
+
+<form (submit)="secondFormSubmit()">
+    <input [(ngModel)]="secondInputModel" />
+    {{secondInputModel}}
+    <ul>
+        <li *ngFor="#inputText of inputList2">
+            {{inputText}}
+        </li>
+    </ul>
+</form>
+

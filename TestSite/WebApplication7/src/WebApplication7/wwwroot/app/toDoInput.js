@@ -1,4 +1,4 @@
-System.register(['angular2/core', './ToDoService'], function(exports_1) {
+System.register(['angular2/core'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,34 +8,33 @@ System.register(['angular2/core', './ToDoService'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, ToDoService_1;
+    var core_1;
     var ToDoInput;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (ToDoService_1_1) {
-                ToDoService_1 = ToDoService_1_1;
             }],
         execute: function() {
             ToDoInput = (function () {
-                function ToDoInput(toDoService) {
-                    // this.arr.length = 999;
-                    this.toDoService = toDoService;
-                    this.arr = Array(2999).fill(0).map(function (x, i) { return i; });
-                    this.arr1 = Array(15).fill(0).map(function (x, i) { return i; });
+                function ToDoInput(test, _a, test1) {
+                    var terms = _a[0];
+                    this.inputList1 = [];
+                    this.inputList2 = [];
+                    this.firstInputModel = "intial value";
                 }
-                ToDoInput.prototype.onClick = function (value) {
-                    //console.log(value);
-                    //console.log(this.toDoService);
+                ToDoInput.prototype.firstFormSubmit = function () {
+                    this.inputList1.push(this.firstInputModel);
+                };
+                ToDoInput.prototype.secondFormSubmit = function () {
+                    this.inputList2.push(this.secondInputModel);
                 };
                 ToDoInput = __decorate([
                     core_1.Component({
                         selector: 'to-do-input',
                         templateUrl: './app/templates/ngForTest.html'
                     }), 
-                    __metadata('design:paramtypes', [ToDoService_1.ToDoService])
+                    __metadata('design:paramtypes', [Object, Object, Object])
                 ], ToDoInput);
                 return ToDoInput;
             })();
